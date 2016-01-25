@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace Enums_Lab
 {
-    class Forecast : SevenDaysABS
+    enum MyForecast
     {
-        SevenDaysABS seven = new SevenDaysABS();
-        enum MyForecast
-        {
-            Sunny,
-            Cloudy,
-            Rainy,
-            Thunderstorms,
-            PartlyCloudy,
-            Foggy,
-            Humid,           
-        };
-        enum Days
-        {
-            Monday,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        };
+        Sunny,
+        Cloudy,
+        Rainy,
+        Thunderstorms,
+        PartlyCloudy,
+        Foggy,
+        Humid,
+    };
+    enum Days
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    };
+    class Forecast
+    {
+
         Random random = new Random();
         public void Forecasts()
-        {
+        {            
             Array myValues = Enum.GetValues(typeof(MyForecast));
             Array Values = Enum.GetValues(typeof(Days));
 
